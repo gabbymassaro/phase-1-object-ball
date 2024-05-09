@@ -151,3 +151,19 @@ function shoeSize(playerName) {
 
 console.log(shoeSize("Alan Anderson")); 
 console.log(shoeSize("Brendan Haywood")); 
+
+
+// function teamColors(teamName) {
+//   let teamColors = gameObject();
+
+//   if (typeof teamColors["away"][teamName] === 'undefined') {
+//     return gameObject()["home"][teamName]["colors"];
+//   }
+
+//   if (typeof teamColors["home"][teamName] === 'undefined') {
+//     return gameObject()["away"][teamName]["colors"];
+//   }
+// }
+
+// console.log(teamColors("Brooklyn Nets")); 
+// console.log(teamColors("Charlotte Hornets"));
