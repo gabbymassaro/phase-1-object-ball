@@ -135,3 +135,35 @@ function numPointsScored(playerName) {
 
 console.log(numPointsScored("Alan Anderson")); 
 console.log(numPointsScored("Brendan Haywood")); 
+
+
+function shoeSize(playerName) {
+  let shoeSize = gameObject();
+
+  if (typeof shoeSize["away"]["players"][playerName] === 'undefined') {
+    return "From the home team: " + gameObject()["home"]["players"][playerName]["shoe"] + " shoe size from " + playerName;
+  }
+
+  if (typeof shoeSize["home"]["players"][playerName] === 'undefined') {
+    return "From the away team: " + gameObject()["away"]["players"][playerName]["shoe"] + " shoe size from " + playerName;
+  } 
+}
+
+console.log(shoeSize("Alan Anderson")); 
+console.log(shoeSize("Brendan Haywood")); 
+
+
+// function teamColors(teamName) {
+//   let teamColors = gameObject();
+
+//   if (typeof teamColors["away"][teamName] === 'undefined') {
+//     return gameObject()["home"][teamName]["colors"];
+//   }
+
+//   if (typeof teamColors["home"][teamName] === 'undefined') {
+//     return gameObject()["away"][teamName]["colors"];
+//   }
+// }
+
+// console.log(teamColors("Brooklyn Nets")); 
+// console.log(teamColors("Charlotte Hornets"));
