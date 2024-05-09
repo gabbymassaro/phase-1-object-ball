@@ -124,11 +124,11 @@ function numPointsScored(playerName) {
   let points = gameObject();
 
   if (typeof points["away"]["players"][playerName] === 'undefined') {
-    return "From the home team: " + gameObject()["home"]["players"][playerName]["points"] + " points from " + playerName;
+    return playerName + " scored " + gameObject()["home"]["players"][playerName]["points"] + " points for the home team.";
   }
 
   if (typeof points["home"]["players"][playerName] === 'undefined') {
-    return "From the away team: " + gameObject()["away"]["players"][playerName]["points"] + " points from " + playerName;
+    return playerName + " scored " + gameObject()["away"]["players"][playerName]["points"] + " points for the away team.";
   } 
   
 }
@@ -141,11 +141,11 @@ function shoeSize(playerName) {
   let shoeSize = gameObject();
 
   if (typeof shoeSize["away"]["players"][playerName] === 'undefined') {
-    return "From the home team: " + gameObject()["home"]["players"][playerName]["shoe"] + " shoe size from " + playerName;
+    return "Home team: " + playerName + " wears a size " + gameObject()["home"]["players"][playerName]["shoe"] + " shoe.";
   }
 
   if (typeof shoeSize["home"]["players"][playerName] === 'undefined') {
-    return "From the away team: " + gameObject()["away"]["players"][playerName]["shoe"] + " shoe size from " + playerName;
+    return "Away team: " + playerName + " wears a size " + gameObject()["away"]["players"][playerName]["shoe"] + " shoe.";
   } 
 }
 
