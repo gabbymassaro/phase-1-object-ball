@@ -112,10 +112,26 @@ function gameObject() {
             blocks: 5,
             slamDunks: 12
           }
-        }, // end of players
-      }, // end of away
-    } // end of something
+        },
+      },
+    } 
   return something;
-} // end of function
+}
 
-console.log(gameObject());
+//console.log(gameObject());
+
+function numPointsScored(playerName) {
+  let points = gameObject();
+
+  if (typeof points["away"]["players"][playerName] === 'undefined') {
+    return "From the home team: " + gameObject()["home"]["players"][playerName]["points"] + " points from " + playerName;
+  }
+
+  if (typeof points["home"]["players"][playerName] === 'undefined') {
+    return "From the away team: " + gameObject()["away"]["players"][playerName]["points"] + " points from " + playerName;
+  } 
+  
+}
+
+console.log(numPointsScored("Alan Anderson")); 
+console.log(numPointsScored("Brendan Haywood")); 
